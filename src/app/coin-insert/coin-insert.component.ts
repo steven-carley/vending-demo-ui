@@ -13,7 +13,7 @@ export class CoinInsertComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onCoinInsert(value: string): void {
-    this.vendingService.publishMessage('/app/coin', {value});
+  onCoinInsert(weight: string, diameter: string): void {
+    this.vendingService.publishMessage('/app/coin', {weight, diameter});
   }
 }
