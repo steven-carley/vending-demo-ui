@@ -2,7 +2,7 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {VendingStompService} from "../vending-stomp.service";
 import {map} from "rxjs/operators";
 import {Coin} from "../coin.model";
-import {BehaviorSubject, Observable, of, Subscription} from "rxjs";
+import {BehaviorSubject, Subscription} from "rxjs";
 
 @Component({
   selector: 'app-coin-return',
