@@ -1,0 +1,6 @@
+<div>
+  <div *ngFor="let coin of coins | async">
+    <div>{{coin.value ? coin.value : '?'}}</div>
+  </div>
+  <button (click)="clearCoins()">Collect Change</button>
+</div>

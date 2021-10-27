@@ -6,13 +6,15 @@ import { StompRService } from "@stomp/ng2-stompjs";
 import { MessagesComponent } from './messages/messages.component';
 import { DisplayComponent } from './display/display.component';
 import { CoinInsertComponent } from './coin-insert/coin-insert.component';
+import { CoinReturnComponent } from './coin-return/coin-return.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MessagesComponent,
     DisplayComponent,
-    CoinInsertComponent
+    CoinInsertComponent,
+    CoinReturnComponent
   ],
   imports: [
     BrowserModule
