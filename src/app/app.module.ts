@@ -8,6 +8,7 @@ import { DisplayComponent } from './display/display.component';
 import { CoinInsertComponent } from './coin-insert/coin-insert.component';
 import { CoinReturnComponent } from './coin-return/coin-return.component';
 import { ReturnAllCoinsComponent } from './return-all-coins/return-all-coins.component';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ReturnAllCoinsComponent } from './return-all-coins/return-all-coins.com
     DisplayComponent,
     CoinInsertComponent,
     CoinReturnComponent,
-    ReturnAllCoinsComponent
+    ReturnAllCoinsComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule
