@@ -9,6 +9,7 @@ import { CoinInsertComponent } from './coin-insert/coin-insert.component';
 import { CoinReturnComponent } from './coin-return/coin-return.component';
 import { ReturnAllCoinsComponent } from './return-all-coins/return-all-coins.component';
 import { ProductsComponent } from './products/products.component';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ProductsComponent } from './products/products.component';
     ProductsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [
     StompRService
