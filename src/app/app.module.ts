@@ -10,6 +10,7 @@ import { CoinReturnComponent } from './coin-return/coin-return.component';
 import { ReturnAllCoinsComponent } from './return-all-coins/return-all-coins.component';
 import { ProductsComponent } from './products/products.component';
 import { HttpClientModule } from "@angular/common/http";
+import { ResetInventoryComponent } from './reset-inventory/reset-inventory.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HttpClientModule } from "@angular/common/http";
     CoinInsertComponent,
     CoinReturnComponent,
     ReturnAllCoinsComponent,
-    ProductsComponent
+    ProductsComponent,
+    ResetInventoryComponent
   ],
   imports: [
     BrowserModule,
