@@ -3,7 +3,7 @@ import {VendingStompService} from "../vending-stomp.service";
 import {Observable, of} from "rxjs";
 import {ProductService} from "../product.service";
 import {Product} from "../product.model";
-import {catchError, tap} from "rxjs/operators";
+import {catchError, map, tap} from "rxjs/operators";
 import {HttpErrorResponse} from "@angular/common/http";
 
 @Component({
@@ -13,19 +13,17 @@ import {HttpErrorResponse} from "@angular/common/http";
 })
 export class ProductsComponent implements OnInit {
 
-  products: Observable<Product[]> = of([]);
+  products$: Observable<Product[]> = of([]);
 
-  constructor(private vendingService: VendingStompService,
-              private productService: ProductService) { }
+  constructor(private vendingService: VendingStompService) { }
+
 
   ngOnInit(): void {
-    this.products = this.productService.getProducts().pipe(
-      catchError(this.handleError));
+    this.products$ = this.vendingService.subscribeToTopic('/topic/product').pipe(map(message => this.parseProducts(message.body)));
   }
 
-  handleError(error: HttpErrorResponse) {
-    console.error(`error occurred getting ${error.statusText}`);
-    return of<Product[]>([]);
+  private parseProducts(jsonString: string): Product[] {
+    return JSON.parse(jsonString);
   }
 
   purchaseProduct(id: String): void {
