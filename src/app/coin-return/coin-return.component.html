@@ -1,6 +1,13 @@
-<div>
-  <div *ngFor="let coin of coins | async">
-    <div>{{coin.value ? coin.value : '?'}}</div>
-  </div>
-  <button (click)="clearCoins()">Collect Change</button>
+<div class="coin-return-container">
+  <mat-divider></mat-divider>
+  <ng-container *ngIf="(coins$ | async) as coins">
+    <div class="coins-container">
+      <ng-container *ngFor="let coin of coins">
+        <button mat-mini-fab disabled>{{coin.value}}</button>
+      </ng-container>
+    </div>
+    <button *ngIf="coins.length" mat-icon-button color="primary" (click)="clearCoins()" aria-label="Collect Change">
+      <mat-icon>waving_hand</mat-icon>
+    </button>
+  </ng-container>
 </div>

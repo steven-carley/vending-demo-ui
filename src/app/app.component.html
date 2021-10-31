@@ -1,9 +1,19 @@
-<div style="text-align:center">
-  <h1>Vending Machine Demo</h1>
+<div class="app-container">
+  <div class="title">
+    <h1>Vending Machine Demo</h1>
+  </div>
+  <mat-card class="main-content-container">
+    <div class="vending-display">
+      <app-display></app-display>
+      <app-return-all-coins></app-return-all-coins>
+    </div>
+    <div class="vending-body">
+      <app-coin-insert class="coin-insert"></app-coin-insert>
+      <app-products class="products"></app-products>
+      <app-coin-return class="coin-return"></app-coin-return>
+    </div>
+  </mat-card>
+  <div class="controls">
+    <app-reset-inventory></app-reset-inventory>
+  </div>
 </div>
-<app-display></app-display>
-<app-coin-insert></app-coin-insert>
-<app-products></app-products>
-<app-coin-return></app-coin-return>
-<app-return-all-coins></app-return-all-coins>
-<app-reset-inventory></app-reset-inventory>

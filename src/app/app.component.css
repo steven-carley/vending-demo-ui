@@ -1,0 +1,50 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  text-align: center;
+}
+
+.main-content-container {
+  width: 400px;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.vending-display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.vending-body {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-areas:
+    'coin products'
+    'coin products'
+    'return return';
+}
+
+.coin-insert {
+  grid-area: coin;
+}
+
+.products {
+  grid-area: products;
+}
+
+.coin-return {
+  grid-area: return;
+}
+
+.controls {
+  margin-top: 100px;
+  align-self: center;
+}

@@ -1,6 +1,6 @@
-<div>
-  <button (click)="onCoinInsert('2.500', '0.750')">Insert Penny</button>
-  <button (click)="onCoinInsert('5.000', '0.835')">Insert Nickel</button>
-  <button (click)="onCoinInsert('2.268', '0.705')">Insert Dime</button>
-  <button (click)="onCoinInsert('5.670', '0.955')">Insert Quarter</button>
+<div class="coins-container">
+  <button class="penny" mat-mini-fab (click)="onCoinInsert('2.500', '0.750')">1&#162;</button>
+  <button class="nickel "mat-mini-fab (click)="onCoinInsert('5.000', '0.835')">5&#162;</button>
+  <button class="dime" mat-mini-fab (click)="onCoinInsert('2.268', '0.705')">10&#162;</button>
+  <button class="quarter" mat-mini-fab (click)="onCoinInsert('5.670', '0.955')">25&#162;</button>
 </div>

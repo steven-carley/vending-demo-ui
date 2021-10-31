@@ -3,6 +3,7 @@ import {VendingStompService} from "../vending-stomp.service";
 import {map} from "rxjs/operators";
 import {Coin} from "../coin.model";
 import {BehaviorSubject, Subscription} from "rxjs";
+import {Product} from "../product.model";
 
 @Component({
   selector: 'app-coin-return',
@@ -11,13 +12,13 @@ import {BehaviorSubject, Subscription} from "rxjs";
 })
 export class CoinReturnComponent implements OnInit, OnDestroy {
 
-  coins: BehaviorSubject<Coin[]> = new BehaviorSubject<Coin[]>([]);
+  coins$: BehaviorSubject<Coin[]> = new BehaviorSubject<Coin[]>([]);
   subscription = new Subscription();
 
   constructor(private vendingService: VendingStompService) { }
 
   clearCoins(): void {
-    this.coins = new BehaviorSubject<Coin[]>([]);
+    this.coins$ = new BehaviorSubject<Coin[]>([]);
   }
 
   ngOnInit(): void {
@@ -25,9 +26,13 @@ export class CoinReturnComponent implements OnInit, OnDestroy {
         .subscribeToTopic('/topic/return')
         .pipe(map(message => message.body))
         .subscribe(value => {
-          this.coins.next(this.coins.getValue().concat([new Coin(JSON.parse(value))]));
+          this.coins$.next(this.coins$.getValue().concat([this.parseCoin(value)]));
         })
       );
+  }
+
+  private parseCoin(jsonString: string): Coin {
+    return JSON.parse(jsonString);
   }
 
   ngOnDestroy() : void{

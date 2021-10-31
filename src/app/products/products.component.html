@@ -1,3 +1,5 @@
-<div *ngFor="let product of products$ | async">
-  <button (click)="purchaseProduct(product.id)">{{product.description}} {{product.price | currency}}</button>
+<div class="products-container" >
+  <div *ngFor="let product of products$ | async">
+    <button mat-raised-button color="primary" (click)="purchaseProduct(product.id)">{{product.description}}<br>{{product.price | currency}}</button>
+  </div>
 </div>

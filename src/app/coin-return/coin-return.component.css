@@ -1,0 +1,12 @@
+.coin-return-container {
+  margin-top: 20px;
+  min-height: 40px;
+}
+
+.coins-container {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
+}

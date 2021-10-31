@@ -9,8 +9,12 @@ import { CoinInsertComponent } from './coin-insert/coin-insert.component';
 import { CoinReturnComponent } from './coin-return/coin-return.component';
 import { ReturnAllCoinsComponent } from './return-all-coins/return-all-coins.component';
 import { ProductsComponent } from './products/products.component';
-import { HttpClientModule } from "@angular/common/http";
 import { ResetInventoryComponent } from './reset-inventory/reset-inventory.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from "@angular/material/button";
+import {MatCardModule} from "@angular/material/card";
+import {MatDividerModule} from "@angular/material/divider";
+import {MatIconModule} from "@angular/material/icon";
 
 @NgModule({
   declarations: [
@@ -25,7 +29,11 @@ import { ResetInventoryComponent } from './reset-inventory/reset-inventory.compo
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    MatButtonModule,
+    MatCardModule,
+    MatDividerModule,
+    MatIconModule,
+    BrowserAnimationsModule
   ],
   providers: [
     StompRService
