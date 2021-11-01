@@ -3,7 +3,6 @@ import {VendingStompService} from "../vending-stomp.service";
 import {map} from "rxjs/operators";
 import {Coin} from "../coin.model";
 import {BehaviorSubject, Subscription} from "rxjs";
-import {Product} from "../product.model";
 
 @Component({
   selector: 'app-coin-return',

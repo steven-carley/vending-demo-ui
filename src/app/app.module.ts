@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { StompRService } from "@stomp/ng2-stompjs";
-import { MessagesComponent } from './messages/messages.component';
 import { DisplayComponent } from './display/display.component';
 import { CoinInsertComponent } from './coin-insert/coin-insert.component';
 import { CoinReturnComponent } from './coin-return/coin-return.component';
@@ -19,7 +18,6 @@ import {MatIconModule} from "@angular/material/icon";
 @NgModule({
   declarations: [
     AppComponent,
-    MessagesComponent,
     DisplayComponent,
     CoinInsertComponent,
     CoinReturnComponent,

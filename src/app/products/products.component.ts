@@ -1,10 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {VendingStompService} from "../vending-stomp.service";
 import {Observable, of} from "rxjs";
-import {ProductService} from "../product.service";
 import {Product} from "../product.model";
-import {catchError, map, tap} from "rxjs/operators";
-import {HttpErrorResponse} from "@angular/common/http";
+import {map} from "rxjs/operators";
 
 @Component({
   selector: 'app-products',

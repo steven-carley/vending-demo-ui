@@ -1,4 +1,4 @@
-import {Injectable, OnInit} from '@angular/core';
+import {Injectable} from '@angular/core';
 import {StompRService} from "@stomp/ng2-stompjs";
 import {Observable} from "rxjs";
 import {Message} from "@stomp/stompjs";

@@ -14,7 +14,7 @@ export class ReturnAllCoinsComponent implements OnInit {
   }
 
   returnAllCoins(): void {
-    this.vendingService.publishMessage("/app/returncoins", "");
+    this.vendingService.publishMessage('/app/returncoins', '');
   }
 
 }
